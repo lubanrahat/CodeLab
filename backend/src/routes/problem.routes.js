@@ -6,7 +6,7 @@ import {
 import {
   createProblem,
   getAllProblems,
-  getProblem,
+  getProblemById,
   getProblemSolvedByUser,
   updateProblem,
   deleteProblem,
@@ -18,7 +18,7 @@ router.post("/create-problem", authMiddleware, cheackAdmin, createProblem);
 
 router.get("/get-all-problems", authMiddleware, getAllProblems);
 
-router.get("/get-problem/:id", authMiddleware, getProblem);
+router.get("/get-problem/:id", authMiddleware, getProblemById);
 
 router.put("/update-problem/:id", authMiddleware, cheackAdmin, updateProblem);
 
